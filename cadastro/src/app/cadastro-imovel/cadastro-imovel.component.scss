@@ -1,0 +1,54 @@
+::ng-deep .mat-input-element {
+    background-color: beige !important;
+  }
+
+.container {
+    width: 40%;
+    padding: 0px ;
+}
+
+.form-cadastro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+}
+
+div {    
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+mat-form-field {
+    padding-left: 6px;
+}
+
+mat-card{
+    background-color: rgb(98, 100, 105);
+}
+
+mat-card-title{
+text-align: center;
+padding-top: 7px;
+}
+
+.info{
+    width: 84%;
+}
+
+#imagem{
+    margin: 10px;
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    padding: 15px;
+}
+
+img {
+    margin: 5px;
+}
+
+button {
+    background-color: rgb(73, 82, 88);
+    margin-bottom: 10px;
+}

@@ -1,0 +1,15 @@
+// faça um container de forma que o conteúdo seja centralizado
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+mat-card {
+    margin: 5%;
+}
