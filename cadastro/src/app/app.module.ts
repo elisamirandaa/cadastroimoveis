@@ -12,6 +12,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { HomeComponent } from './home/home.component';
 import { CadastroImovelComponent } from './cadastro-imovel/cadastro-imovel.component';
+import { ImovelCadastradoComponent } from './imovel-cadastrado/imovel-cadastrado.component';
+import { BotaoVoltarComponent } from './botao-voltar/botao-voltar.component';
+import { UsuarioNovoComponent } from './usuario-novo/usuario-novo.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { CadastroImovelComponent } from './cadastro-imovel/cadastro-imovel.compo
     LoginComponent,
     HomeComponent,
     CadastroImovelComponent,
+    ImovelCadastradoComponent,
+    BotaoVoltarComponent,
+    UsuarioNovoComponent,
   ],
   imports: [
     FormsModule,

@@ -1,0 +1,28 @@
+<div class="container">      
+    <mat-card-title>Conheça nossos Imóveis</mat-card-title> 
+    <mat-card>
+        <div *ngFor="let imovel of imoveis">
+            <span>
+                <p>Fotos: {{ imovel.foto }}</p>            
+            </span>
+            <span>
+                <p>Informações: {{ imovel.informacoes }}</p>
+            </span>
+            <span>
+                <p>Tipo: {{ imovel.tipo }}</p>
+                <p>Valor: {{ imovel.valor }}</p>
+                <p>Telefone: {{ imovel.telefone }}</p>
+            </span>
+            <span>                
+                <p>Rua: {{ imovel.rua }}</p>
+                <p>Número: {{ imovel.numero }}</p>
+                <p>Bairro: {{ imovel.bairro }}</p>
+            </span>
+            <span>                
+                <p>Cidade: {{ imovel.cidade }}</p>
+                <p>Estado: {{ imovel.estado }}</p>
+            </span>
+        </div>
+    </mat-card> 
+</div>
+<app-botao-voltar></app-botao-voltar> 

@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;    
+    padding-top: 4%;
+    align-items: center;
+}
+
+mat-card-title{
+    text-align: center;
+    font-size: 36px;
+    font-weight: 500;
+    color: rgb(20, 20, 20);
+}
+
+mat-card {    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+}
+
+div {    
+    padding-left: 15px;
+    padding-right: 15px;
+}

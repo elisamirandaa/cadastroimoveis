@@ -1,0 +1,27 @@
+<div class="container">
+
+    <mat-card>
+        <mat-card-title>Cadastro Usuário</mat-card-title>
+        <mat-card-content>
+            <form class="usuario-form" [formGroup]="formUsuarioNovo">
+                <div>
+                    <mat-form-field>
+                        <input name="user" matInput placeholder="Usuário" [(ngModel)]="usuarioNovo">
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field>
+                        <input type="password" name="password" matInput placeholder="Senha" [(ngModel)]="senha">
+                    </mat-form-field>
+                </div>    
+                <span>
+                </span>
+                <div class="botao">
+                    <button (click)="btnUsuarioNovo()" mat-raised-button color="primary" type="submit">Cadastrar</button>
+                </div>
+
+
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

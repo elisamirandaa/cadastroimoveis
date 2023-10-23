@@ -1,5 +1,7 @@
+import { CadastroImovelService } from './../cadastro-imovel.service';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro-imovel',
@@ -13,7 +15,11 @@ export class CadastroImovelComponent {
   fotosPreview: string[] = [];
 
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(
+    private formBuilder: FormBuilder, 
+    private cadastroImovelService: CadastroImovelService, 
+    private router: Router) {
+      
     this.formImovel = this.formBuilder.group({
       informacoes: ['', Validators.required],
       valor: ['', Validators.required],
@@ -21,11 +27,10 @@ export class CadastroImovelComponent {
       cep: ['', Validators.required],
       rua: ['', Validators.required],
       numero: ['', Validators.required],
-      bairro: ['', Validators.required],
+      bairro: ['', Validators.required], 
       cidade: ['', Validators.required],
       estado: ['', Validators.required],
       tipo: ['', Validators.required],
-      foto: ['', Validators.required]
     });
   }
 
@@ -44,7 +49,13 @@ export class CadastroImovelComponent {
     }
   }
 
-  onSubmit() {
-    // lógica para enviar o formulário
+  onSubmit(): void {
+    if (this.formImovel.valid) {
+      const novoImovel = this.formImovel.value;
+      this.cadastroImovelService.cadastrarImovel(novoImovel);
+      alert('Imovel cadastrado com sucesso!');
+      this.formImovel.reset();      
+      this.router.navigate(["home"])
+    }
   }
 }

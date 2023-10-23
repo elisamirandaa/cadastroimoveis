@@ -11,23 +11,12 @@ mat-card-title{
     padding: 7%;
 }
 
-.login-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 mat-card {
     margin: 5%;
 }
 
-button {
-    padding: 8px;
-}
-
-.botao {
+.usuario-form {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;   
-    width: 100%;
+    flex-direction: column;
+    align-items: center;
 }
