@@ -16,6 +16,12 @@ div {
     padding-right: 15px;
 }
 
+.card-foto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 mat-form-field {
     padding-left: 6px;
 }

@@ -4,13 +4,15 @@
 
             <form class="form-cadastro" [formGroup]="formImovel" (ngSubmit)="onSubmit()">      
             <div id="imagem">
-                <input type="file" (change)="onFileSelected($event)">
+                <input type="file" (change)="onFileSelected($event)"> <br><br>
                  <!-- <button mat-button *ngIf="fotosSelecionadas.length > 0" type="button">
                   Foto +
                 </button>  -->
-                <span *ngFor="let fotoPreview of fotosPreview">
-                    <img  mat-card-sm-image [src]="fotoPreview" alt="Foto selecionada">
-                </span>
+                <mat-card class="card-foto">
+                    <span *ngFor="let fotoPreview of fotosPreview">
+                        <img mat-card-sm-image [src]="fotoPreview" alt="Foto selecionada">
+                    </span>
+                </mat-card>
             </div>
             <div>
                 <mat-form-field class="info">
@@ -25,15 +27,21 @@
                 <input matInput placeholder="Telefone" formControlName="telefone">
                 </mat-form-field>
                 <mat-form-field>
-                <input matInput placeholder="Tipo" formControlName="tipo">
-                </mat-form-field>
+                    <mat-label>Tipo</mat-label>
+                    <mat-select [(value)]="selected">
+                      <mat-option value="option1">Casa</mat-option>
+                      <mat-option value="option2">Apartamento</mat-option>
+                      <mat-option value="option3">Terreno</mat-option>
+                    </mat-select>
+                  </mat-form-field>
             </div>
             <div>
                 <mat-form-field>
-                <input  matInput placeholder="Cep" formControlName="cep">
-                </mat-form-field>
+                <input   matInput placeholder="Cep" formControlName="cep">
+            </mat-form-field>
+            <button mat-button (click)="getCep()">Buscar</button>
                 <mat-form-field>
-                <input  matInput placeholder="Rua" formControlName="rua">
+                <input  matInput placeholder="Rua" formControlName="logradouro">
                 </mat-form-field>
                 <mat-form-field>
                 <input  matInput placeholder="Número" formControlName="numero">
@@ -42,10 +50,10 @@
                 <input matInput placeholder="Bairro" formControlName="bairro">
                 </mat-form-field>
                 <mat-form-field>
-                <input matInput placeholder="Cidade" formControlName="cidade">
+                <input matInput placeholder="Cidade" formControlName="localidade">
                 </mat-form-field>
                 <mat-form-field>
-                <input matInput placeholder="Estado" formControlName="estado">
+                <input matInput placeholder="Estado" formControlName="uf">
                 </mat-form-field>
             </div>
             <div class="botao">

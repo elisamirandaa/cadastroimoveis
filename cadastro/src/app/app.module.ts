@@ -15,6 +15,8 @@ import { CadastroImovelComponent } from './cadastro-imovel/cadastro-imovel.compo
 import { ImovelCadastradoComponent } from './imovel-cadastrado/imovel-cadastrado.component';
 import { BotaoVoltarComponent } from './botao-voltar/botao-voltar.component';
 import { UsuarioNovoComponent } from './usuario-novo/usuario-novo.component';
+import {MatSelectModule} from '@angular/material/select';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { UsuarioNovoComponent } from './usuario-novo/usuario-novo.component';
   ],
   imports: [
     FormsModule,
+    MatSelectModule,
     ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
@@ -35,9 +38,10 @@ import { UsuarioNovoComponent } from './usuario-novo/usuario-novo.component';
     MatCardModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
